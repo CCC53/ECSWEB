@@ -94,6 +94,7 @@ export default {
         margin-top: 2em;
         .title {
             font-size: 2.5em !important;
+            font-weight: 600;
             margin: 1.5em 0em 0.5em 0em;
             text-align: center;
         }
