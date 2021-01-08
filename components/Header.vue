@@ -95,4 +95,24 @@ export default {
       margin-left: 17em;
     }
   }
+  @media (max-width: 375px) {
+    .header {
+      justify-content: flex-start;
+      .logoContainer {
+        img {
+          height: 3.5em;
+        }
+      }
+      &.scrolled_color {
+        .logoContainer {
+          img {
+            height: 3em;
+          }
+        }
+      }
+    }
+    .btn {
+      margin-left: 14em;
+    }
+  }
 </style>

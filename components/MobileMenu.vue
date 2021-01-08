@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="value" absolute right temporary class="sidenav">
+  <v-navigation-drawer v-model="menuStatus" app right disable-resize-watcher hide-overlay class="sidenav">
     <div class="navigationContentWraper d-flex flex-column justify-space-between">
       <div class="sidetop d-flex align-center justify-space-between">
         <img src="../static/LOGO.png" alt="Logo" />
@@ -23,11 +23,28 @@
     </div>
   </v-navigation-drawer>
 </template>
+
+
 <script>
 export default {
   props: {
     value: Boolean,
   },
+  watch: {
+    value(value) {
+      console.log('value value', value);
+      this.menuStatus = value;
+    },
+    menuStatus(value) {
+      console.log('menuStatus value', value);
+      this.$emit('input', value);
+    }
+  },
+  data() {
+    return {
+      menuStatus: false
+    }
+  }
 };
 </script>
 

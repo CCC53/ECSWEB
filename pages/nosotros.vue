@@ -164,9 +164,6 @@ export default {
         .v-carousel {
             margin: 1em auto 0em auto;
         }
-        .v-window {
-            height: 30em;
-        }
         .incContainer {
             // padding: 3em 0em;
             h4 {
@@ -180,5 +177,14 @@ export default {
         .membersContainer {
             flex-direction: column;
         }
+  }
+
+  @media (max-width: 375px) {
+    .v-carousel {
+      height: 150% !important;
+      h4 {
+        margin-bottom: -0.8em !important;
+      }
     }
+  }
 </style>

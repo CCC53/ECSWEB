@@ -122,19 +122,26 @@ export default {
     @media (max-width: 600px) {
         .productsContainer {
             .title {
+                text-align: center !important;
                 font-size: 1.6em !important;
             }
         }
         .v-card {
-            width: 90% !important;
+            width: 98% !important;
             h1 {
                 font-size: 1.4em !important;
+                text-align: center;
             }
         }
         .servicesContainer {
             .servicesTitle {
                 font-size: 1.6em !important;
             }
+        }
+    }
+    @media(max-width:375px) {
+        .header {
+            text-align: center !important;
         }
     }
 </style>

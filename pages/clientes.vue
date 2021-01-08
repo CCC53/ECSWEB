@@ -208,4 +208,11 @@ export default {
             font-size: 0.7em !important;
         }
     }
+    @media (max-width: 375px) {
+        .successStories {
+            td {
+                font-size: 0.57em !important;
+            }
+        }
+    }
 </style>
