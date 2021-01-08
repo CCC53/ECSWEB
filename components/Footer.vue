@@ -64,7 +64,6 @@
     }
     @media (min-width: 768px) and (max-width: 992px) {
         .footerContainer {
-            width: 50% !important;
             .logoContainer {
                 height: 8em;
                 img {
@@ -77,7 +76,6 @@
         .footerContainer {
             flex-direction: column;
             height: 50em;
-            width: 50% !important;
             .infoContainer {
                 align-items: center;
                 display: flex;

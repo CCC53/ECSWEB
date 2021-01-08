@@ -92,7 +92,7 @@ export default {
       }
     }
     .btn {
-      margin-left: 17em;
+      margin-left: 18em;
     }
   }
   @media (max-width: 375px) {
