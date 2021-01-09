@@ -38,7 +38,13 @@
             <v-expansion-panels popout>
                 <v-expansion-panel v-for="(service, i) in services" :key="i">
                     <v-expansion-panel-header>{{service.title}}</v-expansion-panel-header>
-                        <v-expansion-panel-content>{{service.body}}</v-expansion-panel-content>
+                        <v-expansion-panel-content>
+                            <p>
+                                {{service.body}}
+                            </p>
+                            <br>
+                            <img :src="service.image" class="service">
+                        </v-expansion-panel-content>
                 </v-expansion-panel>
             </v-expansion-panels>
         </div>
@@ -60,13 +66,16 @@ export default {
             onboarding: 0,
             services: [{
                 title: 'Desarrollo de software a medida',
-                body: 'Diseñamos y creamos herramientas informáticas basadas en necesidades particulares de nuestros clientes. Analizamos las características de la compañía en busca de optimizar aquellos procesos clave para el negocio. en la creación El resultado de este análisis resulta de un sistema a medida que impacte de forma directa o indirecta en las ganancias de la empresa.'
+                body: 'Diseñamos y creamos herramientas informáticas basadas en necesidades particulares de nuestros clientes. Analizamos las características de la compañía en busca de optimizar aquellos procesos clave para el negocio. en la creación El resultado de este análisis resulta de un sistema a medida que impacte de forma directa o indirecta en las ganancias de la empresa.',
+                image:'/services/desarrollo.png'
             }, {
                 title: 'Consultoría',
-                body: 'Cuando un cliente tiene un problema que requiere un análisis a fondo, acudimos al negocio para encargarnos de hacer una revisión, detectar errores internos y dar las pautas para remediar el problema.'
+                body: 'Cuando un cliente tiene un problema que requiere un análisis a fondo, acudimos al negocio para encargarnos de hacer una revisión, detectar errores internos y dar las pautas para remediar el problema.',
+                image: '/services/consultoria.png'
             }, {
                 title: 'Auditoría',
-                body: 'Recogemos, agrupamos y evaluamos evidencias para estudiar los mecanismos de control que están implantados en la empresa de nuestros clientes, determinando si los mismos son adecuados y cumplen unos determinados objetivos o estrategias, estableciendo los cambios que se deberían realizar para la consecución de estos. Optimizamos el funcionamiento de cualquier entidad.'
+                body: 'Recogemos, agrupamos y evaluamos evidencias para estudiar los mecanismos de control que están implantados en la empresa de nuestros clientes, determinando si los mismos son adecuados y cumplen unos determinados objetivos o estrategias, estableciendo los cambios que se deberían realizar para la consecución de estos. Optimizamos el funcionamiento de cualquier entidad.',
+                image: '/services/auditoria.png'
             }]
         }
     },
@@ -116,6 +125,14 @@ export default {
             .v-expansion-panel {
                 color: black;
                 background-color: rgb(194, 188, 188);
+                text-align: center;
+                p {
+                    text-align: left !important;
+                }
+                .service {
+                    height: 15em;
+                    text-align: center;
+                }
             }
         }
     }

@@ -67,17 +67,8 @@ export default {
       }
     }
   }
-  @media (min-width: 768px) and (max-width: 992px) {
-    .header {
-      justify-content: flex-start;
-    }
-    .btn {
-      margin-left: 41em;
-    }
-  }
   @media (max-width: 600px) {
     .header {
-      justify-content: flex-start;
       .logoContainer {
         img {
           height: 3.5em;
@@ -90,29 +81,6 @@ export default {
           }
         }
       }
-    }
-    .btn {
-      margin-left: 18em;
-    }
-  }
-  @media (max-width: 400px) {
-    .header {
-      justify-content: flex-start;
-      .logoContainer {
-        img {
-          height: 3.5em;
-        }
-      }
-      &.scrolled_color {
-        .logoContainer {
-          img {
-            height: 3em;
-          }
-        }
-      }
-    }
-    .btn {
-      margin-left: 14.5em;
     }
   }
 </style>
