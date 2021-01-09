@@ -146,6 +146,7 @@ export default {
     .membersContainer {
         width: 95%;
         margin: -1em auto;
+        flex-wrap: wrap;
     }
     .v-list {
         width: 95%;

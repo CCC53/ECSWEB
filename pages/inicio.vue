@@ -2,7 +2,7 @@
     <div>
         <div class="header d-flex align-center justify-center flex-column">
             <h1>Efficient Custom Software</h1>
-            <h2>Software a Medida</h2>
+            <h2>Software Eficiente a la Medida</h2>
         </div>
         <div class="productsContainer">
             <h1 class="title">Nuestros Productos</h1>
@@ -39,11 +39,13 @@
                 <v-expansion-panel v-for="(service, i) in services" :key="i">
                     <v-expansion-panel-header>{{service.title}}</v-expansion-panel-header>
                         <v-expansion-panel-content>
-                            <p>
-                                {{service.body}}
-                            </p>
-                            <br>
-                            <img :src="service.image" class="service">
+                            <div class="services d-flex">
+                                <p>
+                                    {{service.body}}
+                                </p>
+                                <br>
+                                <img :src="service.image" class="service">
+                                </div>
                         </v-expansion-panel-content>
                 </v-expansion-panel>
             </v-expansion-panels>
@@ -160,11 +162,19 @@ export default {
             .servicesTitle {
                 font-size: 1.6em !important;
             }
+            .services {
+                flex-direction: column;
+            }
         }
     }
     @media(max-width:400px) {
         .header {
             text-align: center !important;
+        }
+        .servicesContainer {
+            .services {
+                flex-direction: column;
+            }
         }
         .product {
             padding: 0em 1em;
