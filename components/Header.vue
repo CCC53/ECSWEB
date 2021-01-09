@@ -95,7 +95,7 @@ export default {
       margin-left: 18em;
     }
   }
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     .header {
       justify-content: flex-start;
       .logoContainer {
@@ -112,7 +112,7 @@ export default {
       }
     }
     .btn {
-      margin-left: 1em;
+      margin-left: 14.5em;
     }
   }
 </style>

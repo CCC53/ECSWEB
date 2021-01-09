@@ -179,7 +179,7 @@ export default {
         }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     .v-carousel {
       height: 150% !important;
       h4 {
