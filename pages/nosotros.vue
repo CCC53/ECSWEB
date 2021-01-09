@@ -183,11 +183,14 @@ export default {
     .v-carousel {
       height: 150% !important;
       h4 {
-        margin-bottom: -0.3em !important;
+        margin-bottom: -0.8em !important;
+      }
+      p {
+        font-size: 0.5em;
       }
     }
     .incContainer {
-      padding: 0em 0em 3em 0em;
+      // padding: 0em 0em 3em 0em;
     }
   }
 </style>
