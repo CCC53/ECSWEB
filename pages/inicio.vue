@@ -11,7 +11,7 @@
                     <v-window-item v-for="(product, i) in products" :key="i">
                         <v-card color="rgb(184, 169, 169)" height="250">
                             <v-row class="fill-height" align="center" justify="center">
-                                <h1 style="font-size: 3rem;" class="white--text">{{ product }}</h1>
+                                <h1 class="product white--text">{{ product }}</h1>
                             </v-row>
                         </v-card>
                     </v-window-item>
@@ -107,6 +107,9 @@ export default {
             margin: 1.5em 0em 0.5em 0em;
             text-align: center;
         }
+        .product {
+            text-align: center;
+        }
         .v-card {
             width: 97%;
             margin: 0 auto;
@@ -142,6 +145,9 @@ export default {
                 text-align: center !important;
                 font-size: 1.6em !important;
             }
+            .product {
+                padding: 0em 1em;
+            }
         }
         .v-card {
             width: 98% !important;
@@ -159,6 +165,9 @@ export default {
     @media(max-width:400px) {
         .header {
             text-align: center !important;
+        }
+        .product {
+            padding: 0em 1em;
         }
     }
 </style>

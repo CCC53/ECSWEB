@@ -6,7 +6,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - ecsweb',
+    titleTemplate: '%s',
     title: 'Efficient Custom Software',
     meta: [
       { charset: 'utf-8' },
