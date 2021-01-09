@@ -186,7 +186,7 @@ export default {
         margin-bottom: -0.8em !important;
       }
       p {
-        font-size: 0.82em;
+        font-size: 0.81em;
       }
     }
     .incContainer {
