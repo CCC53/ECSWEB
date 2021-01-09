@@ -112,7 +112,7 @@ export default {
       }
     }
     .btn {
-      margin-left: 14em;
+      margin-left: 10em;
     }
   }
 </style>
