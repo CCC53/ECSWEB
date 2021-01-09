@@ -39,7 +39,7 @@
                 <v-expansion-panel v-for="(service, i) in services" :key="i">
                     <v-expansion-panel-header>{{service.title}}</v-expansion-panel-header>
                         <v-expansion-panel-content>
-                            <div class="services d-flex">
+                            <div class="services d-flex justify-center align-center">
                                 <p>
                                     {{service.body}}
                                 </p>
