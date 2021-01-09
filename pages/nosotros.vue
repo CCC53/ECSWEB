@@ -185,12 +185,12 @@ export default {
       h4 {
         margin-bottom: -0.8em !important;
       }
-      p {
-        font-size: 0.5em;
-      }
+      // p {
+      //   font-size: 0.5em;
+      // }
     }
     .incContainer {
-      // padding: 0em 0em 3em 0em;
+      padding: 0em 0em 9em 0em;
     }
   }
 </style>
