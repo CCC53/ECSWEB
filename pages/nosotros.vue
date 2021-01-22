@@ -25,56 +25,44 @@
                 </v-card-text>
             </v-card>
         </div>
-        <div class="docsContainer">
-            <h1>Documentación</h1>
-            <v-list dense>
-              <v-subheader>Documentos para PROSOFT</v-subheader>
+        <h1>Documentación</h1>
+        <div class="docsContainer d-flex justify-space-around">
+            <v-list flat>
+              <v-subheader>PROSOFT</v-subheader>
               <v-list-item-group color="primary">
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title>Penny</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title>Penny</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title>Penny</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title>Penny</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title>Penny</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title>Penny</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title>Penny</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title>Penny</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title>Penny</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
+                  <v-list-item>
+                    <a href="docs/PROSOFT/anexoBSolicituddeApoyo.pdf" target="_blank" class="doc">Anexo B Solicitud de Apoyo</a>
+                  </v-list-item>
+                  <v-list-item>
+                    <a href="docs/PROSOFT/cartaBajoProtesta.pdf" target="_blank" class="doc">Carta Bajo Protesta</a>
+                  </v-list-item>
+                  <v-list-item>
+                    <a href="docs/cronograma.pdf" target="_blank" class="doc">Cronograma</a>
+                  </v-list-item>
+              </v-list-item-group>
+            </v-list>
+            <v-list flat>
+              <v-subheader>Cronograma</v-subheader>
+              <v-list-item-group color="primary">
+                  <v-list-item>
+                    <a href="docs/cronograma.pdf" target="_blank" class="doc">Cronograma</a>
+                  </v-list-item>
+              </v-list-item-group>
+            </v-list>
+            <v-list flat>
+              <v-subheader>Licitación</v-subheader>
+              <v-list-item-group color="primary">
+                  <v-list-item>
+                    <a href="docs/licitacion.pdf" target="_blank" class="doc">Licitación</a>
+                  </v-list-item>
+              </v-list-item-group>
+            </v-list>
+            <v-list flat>
+              <v-subheader>Cotización</v-subheader>
+              <v-list-item-group color="primary">
+                  <v-list-item>
+                    <a href="docs/cotizacion.pdf" target="_blank" class="doc">Cotización</a>
+                  </v-list-item>
               </v-list-item-group>
             </v-list>
         </div>
@@ -122,7 +110,7 @@ export default {
                 name: 'Carlos Calette',
                 info: 'Estudia actualmente la carrera de Ingeniería en Informática en UPIICSA IPN. Se destaca su conocimiento en desarrollo front-end con Vue y Angular, desarrollo de back-end en Node, Flask y GraphQL, manejo de bases de datos NoSQL. Completando sus actividades académicas con el estudio del idioma inglés y tomando cursos de desarrollo móvil con Flutter.',
                 image: '/members/ccc.jpg'
-            }]
+            }],
         }
     }    
 }
@@ -149,8 +137,12 @@ export default {
         flex-wrap: wrap;
     }
     .v-list {
-        width: 95%;
-        margin: 0 auto;
+        width: 20%;
+    }
+    .doc {
+      color: grey;
+      text-decoration: none;
+      width: 100%;
     }
     @media (min-width: 768px) and (max-width: 992px) {
         .v-carousel {
@@ -159,6 +151,12 @@ export default {
         }
         .membersContainer {
             flex-wrap: wrap;
+        }
+        .docsContainer {
+          .v-list {
+            width: 50%;
+            padding-left: 1em;
+          }
         }
     }
     @media (max-width: 600px) {
@@ -177,6 +175,13 @@ export default {
         }
         .membersContainer {
             flex-direction: column;
+        }
+        .docsContainer {
+          flex-direction: column;
+          align-items: center;
+          .v-list {
+            width: 85%;
+          }
         }
   }
 
