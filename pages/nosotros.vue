@@ -30,14 +30,8 @@
             <v-list flat>
               <v-subheader>PROSOFT</v-subheader>
               <v-list-item-group color="primary">
-                  <v-list-item>
-                    <a href="docs/PROSOFT/anexoBSolicituddeApoyo.pdf" target="_blank" class="doc">Anexo B Solicitud de Apoyo</a>
-                  </v-list-item>
-                  <v-list-item>
-                    <a href="docs/PROSOFT/cartaBajoProtesta.pdf" target="_blank" class="doc">Carta Bajo Protesta</a>
-                  </v-list-item>
-                  <v-list-item>
-                    <a href="docs/cronograma.pdf" target="_blank" class="doc">Cronograma</a>
+                  <v-list-item v-for="(doc, i) in docsPROSOFT" :key="i">
+                    <a :href=doc.file target="_blank" class="doc">{{doc.name}}</a>
                   </v-list-item>
               </v-list-item-group>
             </v-list>
@@ -53,7 +47,7 @@
               <v-subheader>Licitación</v-subheader>
               <v-list-item-group color="primary">
                   <v-list-item>
-                    <a href="docs/licitacion.pdf" target="_blank" class="doc">Licitación</a>
+                    <a href="docs/Licitacion.pdf" target="_blank" class="doc">Licitación</a>
                   </v-list-item>
               </v-list-item-group>
             </v-list>
@@ -61,7 +55,7 @@
               <v-subheader>Cotización</v-subheader>
               <v-list-item-group color="primary">
                   <v-list-item>
-                    <a href="docs/cotizacion.pdf" target="_blank" class="doc">Cotización</a>
+                    <a href="docs/Cotizacion.pdf" target="_blank" class="doc">Cotización</a>
                   </v-list-item>
               </v-list-item-group>
             </v-list>
@@ -73,6 +67,7 @@
 <script>
 import pageHeader from '~/components/page-header';
 import navfooter from '~/components/navfooter';
+const path = 'docs/PROSOFT/';
 export default {
     name: 'nosotros',
     components: {pageHeader, navfooter},
@@ -111,8 +106,54 @@ export default {
                 info: 'Estudia actualmente la carrera de Ingeniería en Informática en UPIICSA IPN. Se destaca su conocimiento en desarrollo front-end con Vue y Angular, desarrollo de back-end en Node, Flask y GraphQL, manejo de bases de datos NoSQL. Completando sus actividades académicas con el estudio del idioma inglés y tomando cursos de desarrollo móvil con Flutter.',
                 image: '/members/ccc.jpg'
             }],
+            docsPROSOFT: [
+              {
+                name: 'Carta bajo protesta de decir verdad del tamaño de la empresa',
+                file: `${path}a_carta bajo protesta de decir verdad del tamaño de la empresa.pdf`
+              },
+              {
+                name: 'Carta de cotizaciones no firmadas',
+                file: `${path}b_carta de cotizaciones no firmadas.pdf`
+              },
+              {
+                name: 'Anexo B Solicitud de Apoyo',
+                file: `${path}anexoBSolicituddeApoyo.pdf`
+              },
+              {
+                name: 'Carta bajo protesta decir verdad no recibe otros apoyos del gobierno',
+                file: `${path}c_carta bajo protesta decir verdad no recibe otros apoyos del gobierno.pdf`
+              },
+              {
+                name: 'Ficha de información personas representates o apoderada legal',
+                file: `${path}e_ficha de información personas representates o apoderada legal.pdf`
+              },
+              {
+                name: 'Ficha informacion de proveedores',
+                file: `${path}f_ficha informacion de proveedores.pdf`
+              },
+              {
+                name: 'Diagrama Gantt',
+                file: `${path}g_diagrama Gantt.pdf`
+              },
+              {
+                name: 'Propuesta plan de formación capacitación del capital humano',
+                file: `${path}h_propuesta_plan_de_formacion_capacitacion_del_capital_humano.pdf`
+              },
+              {
+                name: 'Propuesta de autofinanciamiento',
+                file: `${path}i_propuesta de autofinanciamiento.pdf`
+              },
+              {
+                name: 'Carta autofinanciamiento',
+                file: `${path}i_carta autofinanciamiento.pdf`
+              },
+              {
+                name: 'Cronograma',
+                file: 'docs/cronograma.pdf'
+              }
+            ]
         }
-    }    
+    }
 }
 </script>
 
@@ -139,6 +180,9 @@ export default {
     .v-list {
         width: 20%;
     }
+    .docsContainer {
+      margin-bottom: 2em;
+    }
     .doc {
       color: grey;
       text-decoration: none;
@@ -154,8 +198,7 @@ export default {
         }
         .docsContainer {
           .v-list {
-            width: 50%;
-            padding-left: 1em;
+            width: 100%;
           }
         }
     }
@@ -179,6 +222,7 @@ export default {
         .docsContainer {
           flex-direction: column;
           align-items: center;
+          margin-bottom: 1em;
           .v-list {
             width: 85%;
           }
