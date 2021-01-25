@@ -46,7 +46,6 @@ export default {
             products: ['Servicios a la medida', 'Aplicaciones administrativas', 'Herramientas para portales', 'Desarrollo Web', 'Seguridad',
                         'Innovación en la administración pública', 'Herramientas de desarrollo', 'Bases de datos', 
                         'Sistemas informáticos para aumentar la eficiencia de las empresas', 'Sistemas informáticos para aumentar la competitividad de las empresas'],
-            onboarding: 0,
             services: [{
                 title: 'Desarrollo de software a medida',
                 body: 'Diseñamos y creamos herramientas informáticas basadas en necesidades particulares de nuestros clientes. Analizamos las características de la compañía en busca de optimizar aquellos procesos clave para el negocio. en la creación El resultado de este análisis resulta de un sistema a medida que impacte de forma directa o indirecta en las ganancias de la empresa.',
@@ -61,16 +60,7 @@ export default {
                 image: '/services/auditoria.png'
             }]
         }
-    },
-    methods: {
-        next () {
-            this.onboarding = this.onboarding + 1 === this.products.length ? 0: this.onboarding + 1
-        },
-        prev () {
-            this.onboarding = this.onboarding - 1 < 0 ? this.products.length - 1 : this.onboarding - 1
-      },
-    }, 
-    
+    }
 }
 </script>
 
@@ -122,7 +112,6 @@ export default {
             }
         }
     }
-    @media (min-width: 768px) and (max-width: 992px) {}
     @media (max-width: 600px) {
         .productsContainer {
             .title {
@@ -136,7 +125,7 @@ export default {
                 height: 104% !important;
             }
             .product {
-                font-size: 1.1em !important;
+                font-size: 1em !important;
                 text-align: center;
             }
         }  
