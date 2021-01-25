@@ -70,10 +70,10 @@ export default {
         background-position: center;
         background-size: cover;
         color: white;
-        height: 25em;
+        height: 20em;
     }
     .productsContainer {
-        margin-top: 2em;
+        margin-top: -1em;
         .title {
             font-size: 2.5em !important;
             font-weight: 600;
