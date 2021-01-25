@@ -6,7 +6,7 @@
         </div>
         <div class="productsContainer">
             <h1 class="title">Nuestros Productos</h1>
-            <v-carousel cycle height="300" hide-delimiter-background show-arrows-on-hover>
+            <v-carousel cycle height="300" hide-delimiter-background show-arrows-on-hover interval="2000">
                 <v-carousel-item v-for="(product, i) in products" :key="i">
                   <v-sheet color="rgb(184, 169, 169)" height="100%">
                     <v-row class="fill-height" align="center" justify="center">
@@ -48,7 +48,7 @@ export default {
                         'Sistemas informáticos para aumentar la eficiencia de las empresas', 'Sistemas informáticos para aumentar la competitividad de las empresas'],
             services: [{
                 title: 'Desarrollo de software a medida',
-                body: 'Diseñamos y creamos herramientas informáticas basadas en necesidades particulares de nuestros clientes. Analizamos las características de la compañía en busca de optimizar aquellos procesos clave para el negocio. en la creación El resultado de este análisis resulta de un sistema a medida que impacte de forma directa o indirecta en las ganancias de la empresa.',
+                body: 'Diseñamos y creamos herramientas informáticas basadas en necesidades particulares de nuestros clientes. Analizamos las característicasde la compañía en busca de optimizar aquellos procesos clave para el negocio. en la creación El resultado de este análisis resulta de un sistema a medida que impacte de forma directa o indirecta en las ganancias de la empresa.',
                 image:'/services/desarrollo.png'
             }, {
                 title: 'Consultoría',
