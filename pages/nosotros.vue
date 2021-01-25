@@ -28,7 +28,7 @@
         <h1>Documentación</h1>
         <div class="docsContainer d-flex justify-space-around">
             <v-list flat>
-              <v-subheader>PROSOFT</v-subheader>
+              <v-subheader class="listTitle">PROSOFT</v-subheader>
               <v-list-item-group color="primary">
                   <v-list-item v-for="(doc, i) in docsPROSOFT" :key="i">
                     <a :href=doc.file target="_blank" class="doc">{{doc.name}}</a>
@@ -36,7 +36,7 @@
               </v-list-item-group>
             </v-list>
             <v-list flat>
-              <v-subheader>Cronograma</v-subheader>
+              <v-subheader class="listTitle">Cronograma</v-subheader>
               <v-list-item-group color="primary">
                   <v-list-item>
                     <a href="docs/cronograma.pdf" target="_blank" class="doc">Cronograma</a>
@@ -44,7 +44,7 @@
               </v-list-item-group>
             </v-list>
             <v-list flat>
-              <v-subheader>Licitación</v-subheader>
+              <v-subheader class="listTitle">Licitación</v-subheader>
               <v-list-item-group color="primary">
                   <v-list-item>
                     <a href="docs/Licitacion.pdf" target="_blank" class="doc">Licitación</a>
@@ -52,13 +52,13 @@
               </v-list-item-group>
             </v-list>
             <v-list flat>
-              <v-subheader>Cotización</v-subheader>
+              <v-subheader class="listTitle">Cotización</v-subheader>
               <v-list-item-group color="primary">
                   <v-list-item>
                     <a href="docs/Cotizacion.pdf" target="_blank" class="doc">Cotización</a>
                   </v-list-item>
               </v-list-item-group>
-            </v-list>
+            </v-list> 
         </div>
         <navfooter/>
     </div>
@@ -187,6 +187,10 @@ export default {
       color: grey;
       text-decoration: none;
       width: 100%;
+    }
+    .listTitle {
+      color: black;
+      font-size: 1.3em;
     }
     @media (min-width: 768px) and (max-width: 992px) {
         .v-carousel {
