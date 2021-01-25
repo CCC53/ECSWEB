@@ -6,32 +6,15 @@
         </div>
         <div class="productsContainer">
             <h1 class="title">Nuestros Productos</h1>
-            <v-card flat tile>
-                <v-window v-model="onboarding" vertical>
-                    <v-window-item v-for="(product, i) in products" :key="i">
-                        <v-card color="rgb(184, 169, 169)" height="250">
-                            <v-row class="fill-height" align="center" justify="center">
-                                <h1 class="product white--text">{{ product }}</h1>
-                            </v-row>
-                        </v-card>
-                    </v-window-item>
-                </v-window>
-                <v-card-actions class="justify-space-between">
-                    <v-btn text @click="prev">
-                        <v-icon>mdi-chevron-left</v-icon>
-                    </v-btn>
-                    <v-item-group v-model="onboarding" class="text-center" mandatory>
-                        <v-item v-for="(product, i) in products" :key="i" v-slot="{ active, toggle }">
-                          <v-btn :input-value="active" icon @click="toggle">
-                            <v-icon>mdi-record</v-icon>
-                          </v-btn>
-                        </v-item>
-                    </v-item-group>
-                    <v-btn text @click="next">
-                        <v-icon>mdi-chevron-right</v-icon>
-                    </v-btn>
-                </v-card-actions>
-            </v-card>
+            <v-carousel cycle height="300" hide-delimiter-background show-arrows-on-hover>
+                <v-carousel-item v-for="(product, i) in products" :key="i">
+                  <v-sheet color="rgb(184, 169, 169)" height="100%">
+                    <v-row class="fill-height" align="center" justify="center">
+                        <h1 class="product">{{product}}</h1>
+                    </v-row>
+                  </v-sheet>
+                </v-carousel-item>
+            </v-carousel>
         </div>
         <div class="servicesContainer">
             <h1 class="servicesTitle">Nuestros Servicios</h1>
@@ -40,12 +23,10 @@
                     <v-expansion-panel-header>{{service.title}}</v-expansion-panel-header>
                         <v-expansion-panel-content>
                             <div class="services d-flex justify-center align-center">
-                                <p>
-                                    {{service.body}}
-                                </p>
+                                <p>{{service.body}}</p>
                                 <br>
                                 <img :src="service.image" class="service">
-                                </div>
+                            </div>
                         </v-expansion-panel-content>
                 </v-expansion-panel>
             </v-expansion-panels>
@@ -109,12 +90,12 @@ export default {
             margin: 1.5em 0em 0.5em 0em;
             text-align: center;
         }
-        .product {
-            text-align: center;
-        }
-        .v-card {
+        .v-carousel {
             width: 97%;
             margin: 0 auto;
+            .product {
+                text-align: center;
+            }
         }
     }
     .servicesContainer {
@@ -141,22 +122,26 @@ export default {
             }
         }
     }
+    @media (min-width: 768px) and (max-width: 992px) {}
     @media (max-width: 600px) {
         .productsContainer {
             .title {
                 text-align: center !important;
                 font-size: 1.6em !important;
             }
-            .product {
-                padding: 0em 1em;
-            }
         }
-        .v-card {
-            width: 98% !important;
-            h1 {
-                font-size: 1.4em !important;
+        .v-carousel {
+            width: 95% !important;
+            .v-sheet {
+                height: 104% !important;
+            }
+            .product {
+                font-size: 1.1em !important;
                 text-align: center;
             }
+        }  
+        .v-item-group {
+            text-align: center;
         }
         .servicesContainer {
             .servicesTitle {
@@ -175,9 +160,6 @@ export default {
             .services {
                 flex-direction: column;
             }
-        }
-        .product {
-            padding: 0em 1em;
         }
     }
 </style>
